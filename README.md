@@ -39,11 +39,12 @@ Este endpoint realiza o login do administrador (autenticação JWT opcional). N�
 
 **Exemplo de Requisição:**
 
-json
+```json
 {
   "email": "admin@municca.com",
   "password": "ssss"
-} `
+}
+```
 
 
 ### 2\. CRUD de Usuários
@@ -54,7 +55,7 @@ Cria um novo usuário.
 
 **Exemplo de Payload:**
 
-json
+```json
 
 Copiar código
 
@@ -62,7 +63,7 @@ Copiar código
   "name": "Pedro Paulo",
   "email": "teste@teste"
 }`
-
+```
 **Respostas:**
 
 -   `201 Created`: Usuário criado com sucesso.
@@ -104,7 +105,7 @@ Atualiza um usuário existente pelo ID.
 
 **Exemplo de Payload:**
 
-json
+```json
 
 Copiar código
 
@@ -112,6 +113,7 @@ Copiar código
   "name": "Nome Atualizado",
   "email": "atualizado@example.com"
 }`
+```
 
 **Respostas:**
 
@@ -143,7 +145,7 @@ Cria um novo documento associado a um usuário.
 
 **Exemplo de Payload:**
 
-json
+```json
 
 Copiar código
 
@@ -152,7 +154,7 @@ Copiar código
   "status": false,
   "userId": "e258aa3c-ad2f-41e2-9d3d-6bf613c0af25"
 }`
-
+```
 **Respostas:**
 
 -   `201 Created`: Documento criado com sucesso.
@@ -180,7 +182,7 @@ Atualiza um documento existente pelo ID.
 
 **Exemplo de Payload:**
 
-json
+```json
 
 Copiar código
 
@@ -188,7 +190,7 @@ Copiar código
   "name": "Nome Atualizado do Documento",
   "status": true
 }`
-
+```
 **Respostas:**
 
 -   `200 OK`: Documento atualizado com sucesso.
@@ -225,7 +227,7 @@ Exemplo de Uso
 
 **Requisição:**
 
-bash
+```bash
 
 Copiar código
 
@@ -237,9 +239,10 @@ Content-Type: application/json
   "email": "teste@teste"
 }`
 
+```
 **Resposta:**
 
-json
+```json
 
 Copiar código
 
@@ -248,12 +251,13 @@ Copiar código
   "name": "Pedro Paulo",
   "email": "teste@teste"
 }`
+```
 
 ### Criação de Documento
 
 **Requisição:**
 
-bash
+```bash
 
 Copiar código
 
@@ -265,10 +269,10 @@ Content-Type: application/json
   "status": false,
   "userId": "e258aa3c-ad2f-41e2-9d3d-6bf613c0af25"
 }`
-
+```
 **Resposta:**
 
-json
+```json
 
 Copiar código
 
@@ -278,4 +282,4 @@ Copiar código
   "status": false,
   "userId": "e258aa3c-ad2f-41e2-9d3d-6bf613c0af25"
 }`
-
+```
