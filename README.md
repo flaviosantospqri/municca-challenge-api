@@ -9,10 +9,8 @@ Esta API foi criada para gerenciar `Usuários` e seus `Documentos` associados, p
 - **Node.js**
 - **Express.js**
 - **Prisma**
-- **SQLite** (ou arrays em memória para simulação de dados)
-- **JWT** (opcional para autenticação)
-
----
+- **SQLite** (Para simular um banco de dados real)
+- **JWT** 
 
 ## Modelos
 
@@ -29,7 +27,7 @@ Esta API foi criada para gerenciar `Usuários` e seus `Documentos` associados, p
 - `status` (Boolean): Status do documento (verdadeiro/falso).
 - `userId` (UUID): Chave estrangeira referenciando o usuário.
 
----
+
 
 ## Endpoints
 
@@ -41,13 +39,12 @@ Este endpoint realiza o login do administrador (autenticação JWT opcional). N�
 
 **Exemplo de Requisição:**
 
-```json
+json
 {
   "email": "admin@municca.com",
   "password": "ssss"
 } `
 
-* * * * *
 
 ### 2\. CRUD de Usuários
 
@@ -71,7 +68,7 @@ Copiar código
 -   `201 Created`: Usuário criado com sucesso.
 -   `400 Bad Request`: Erro de validação.
 
-* * * * *
+
 
 #### GET `/user/:id`
 
@@ -86,7 +83,6 @@ Recupera um usuário pelo ID, incluindo seus documentos associados.
 -   `200 OK`: Retorna os detalhes do usuário e seus documentos associados.
 -   `404 Not Found`: Usuário não encontrado.
 
-* * * * *
 
 #### GET `/users`
 
@@ -97,7 +93,6 @@ Recupera uma lista de todos os usuários.
 -   `200 OK`: Retorna uma lista de usuários.
 -   `204 No Content`: Nenhum usuário encontrado.
 
-* * * * *
 
 #### PATCH `/user/:id`
 
@@ -124,7 +119,6 @@ Copiar código
 -   `404 Not Found`: Usuário não encontrado.
 -   `400 Bad Request`: Erro de validação.
 
-* * * * *
 
 #### DELETE `/user/:id`
 
@@ -139,7 +133,7 @@ Deleta um usuário pelo ID.
 -   `200 OK`: Usuário deletado com sucesso.
 -   `404 Not Found`: Usuário não encontrado.
 
-* * * * *
+
 
 ### 3\. CRUD de Documentos
 
@@ -164,7 +158,7 @@ Copiar código
 -   `201 Created`: Documento criado com sucesso.
 -   `400 Bad Request`: Erro de validação.
 
-* * * * *
+
 
 #### GET `/documents`
 
@@ -175,7 +169,6 @@ Recupera uma lista de todos os documentos.
 -   `200 OK`: Retorna uma lista de documentos.
 -   `204 No Content`: Nenhum documento encontrado.
 
-* * * * *
 
 #### PATCH `/document/:id`
 
@@ -202,7 +195,6 @@ Copiar código
 -   `404 Not Found`: Documento não encontrado.
 -   `400 Bad Request`: Erro de validação.
 
-* * * * *
 
 #### DELETE `/document/:id`
 
@@ -217,7 +209,6 @@ Deleta um documento pelo ID.
 -   `200 OK`: Documento deletado com sucesso.
 -   `404 Not Found`: Documento não encontrado.
 
-* * * * *
 
 Recursos Opcionais
 ------------------
@@ -226,7 +217,6 @@ Recursos Opcionais
 
 A autenticação baseada em JWT pode ser implementada para maior segurança. O endpoint `/login` geraria um token após a autenticação bem-sucedida, que pode ser usado nas requisições subsequentes para proteger as rotas.
 
-* * * * *
 
 Exemplo de Uso
 --------------
@@ -289,4 +279,3 @@ Copiar código
   "userId": "e258aa3c-ad2f-41e2-9d3d-6bf613c0af25"
 }`
 
-* * * * *
