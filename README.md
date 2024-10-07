@@ -1,4 +1,4 @@
-`# Documentação da API - Desafio Técnico Municca Sign
+## Documentação da API - Desafio Técnico Municca Sign
 
 ## Descrição Geral
 
@@ -35,14 +35,14 @@ Esta API foi criada para gerenciar `Usuários` e seus `Documentos` associados, p
 
 #### POST `/login`
 
-Este endpoint realiza o login do administrador (autenticação JWT opcional). Não é necessária a criação de um administrador.
+Este endpoint realiza o login do administrador. Não é necessária a criação de um administrador.
 
 **Exemplo de Requisição:**
-
+Os dados abaixo, são os dados mockados para acesso
 ```json
 {
   "email": "admin@municca.com",
-  "password": "ssss"
+  "password": "admin"
 }
 ```
 
@@ -107,12 +107,10 @@ Atualiza um usuário existente pelo ID.
 
 ```json
 
-Copiar código
-
-`{
+{
   "name": "Nome Atualizado",
   "email": "atualizado@example.com"
-}`
+}
 ```
 
 **Respostas:**
@@ -147,13 +145,11 @@ Cria um novo documento associado a um usuário.
 
 ```json
 
-Copiar código
-
-`{
+{
   "name": "CPF",
   "status": false,
   "userId": "e258aa3c-ad2f-41e2-9d3d-6bf613c0af25"
-}`
+}
 ```
 **Respostas:**
 
@@ -184,12 +180,10 @@ Atualiza um documento existente pelo ID.
 
 ```json
 
-Copiar código
-
-`{
+{
   "name": "Nome Atualizado do Documento",
   "status": true
-}`
+}
 ```
 **Respostas:**
 
@@ -217,7 +211,7 @@ Recursos Opcionais
 
 ### Autenticação JWT (Opcional)
 
-A autenticação baseada em JWT pode ser implementada para maior segurança. O endpoint `/login` geraria um token após a autenticação bem-sucedida, que pode ser usado nas requisições subsequentes para proteger as rotas.
+A autenticação baseada em JWT pode ser implementada para maior segurança. O endpoint `/login` geraria um token após a autenticação bem-sucedida, que pode ser usado nas requisições subsequentes para proteger as rotas. A protenção nas rotas, não está implementada para fins de teste, mas o middleware está criado, sendo necessário apenas aplicar nas rotas. 
 
 
 Exemplo de Uso
@@ -229,7 +223,6 @@ Exemplo de Uso
 
 ```bash
 
-Copiar código
 
 `POST /user
 Content-Type: application/json
@@ -244,13 +237,11 @@ Content-Type: application/json
 
 ```json
 
-Copiar código
-
-`{
+{
   "id": "unique-user-id",
   "name": "Pedro Paulo",
   "email": "teste@teste"
-}`
+}
 ```
 
 ### Criação de Documento
@@ -259,27 +250,23 @@ Copiar código
 
 ```bash
 
-Copiar código
-
-`POST /document
+POST /document
 Content-Type: application/json
 
 {
   "name": "CPF",
   "status": false,
   "userId": "e258aa3c-ad2f-41e2-9d3d-6bf613c0af25"
-}`
+}
 ```
 **Resposta:**
 
 ```json
 
-Copiar código
-
-`{
+{
   "id": "unique-document-id",
   "name": "CPF",
   "status": false,
   "userId": "e258aa3c-ad2f-41e2-9d3d-6bf613c0af25"
-}`
+}
 ```
