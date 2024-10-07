@@ -56,13 +56,10 @@ Cria um novo usuário.
 **Exemplo de Payload:**
 
 ```json
-
-Copiar código
-
-`{
+{
   "name": "Pedro Paulo",
   "email": "teste@teste"
-}`
+}
 ```
 **Respostas:**
 
