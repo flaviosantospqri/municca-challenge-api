@@ -10,7 +10,67 @@ Esta API foi criada para gerenciar `Usuários` e seus `Documentos` associados, p
 - **Express.js**
 - **Prisma**
 - **SQLite** (Para simular um banco de dados real)
-- **JWT** 
+- **JWT**
+
+### Baixar e Executar a Aplicação
+
+#### Pré-requisitos
+
+1.  **Node.js**: Certifique-se de que o Node.js está instalado. Você pode baixá-lo em [nodejs.org](https://nodejs.org/).
+2.  **Git**: Tenha o Git instalado em sua máquina. Você pode baixar em [git-scm.com](https://git-scm.com/).
+
+#### Passo 1: Clonar o repositório
+
+1.  Abra o terminal (ou prompt de comando).
+
+2.  Navegue até o diretório onde deseja clonar a aplicação.
+
+3.  Execute o seguinte comando, substituindo `<URL_DO_REPOSITORIO>` pela URL do seu repositório no GitHub:
+
+    `git clone <URL_DO_REPOSITORIO>`
+
+4.  Acesse o diretório da aplicação:
+
+
+    `cd nome-do-repositorio`
+
+#### Passo 2: Instalar as dependências
+
+1.  Execute o comando para instalar as dependências do projeto:
+
+    `npm install`
+
+#### Passo 3: Configurar o Prisma
+
+1.  Certifique-se de que o Prisma está corretamente configurado. Se você tiver um arquivo `prisma/schema.prisma`, verifique se a configuração do banco de dados está correta para SQLite.
+
+2.  Gere o cliente Prisma:
+
+    `npx prisma generate`
+
+3.  Execute as migrações (se necessário):
+
+    `npx prisma migrate dev --name init`
+
+    Isso criará o banco de dados SQLite e as tabelas iniciais.
+
+#### Passo 4: Executar a aplicação
+
+1.  Para executar a aplicação, use o seguinte comando:
+
+    `npm run dev`
+
+    (ou o comando específico que você usa para iniciar seu servidor)
+
+#### Passo 5: Testar a aplicação
+
+1.  Abra um navegador e acesse `http://localhost:3000` (ou a porta que sua aplicação estiver usando).
+2.  Verifique se tudo está funcionando como esperado.
+
+### Dicas Adicionais
+
+-   **Scripts no package.json**: Verifique o arquivo `package.json` para entender os scripts disponíveis, como `build`, `start`, etc.
+-   **Documentação**: Consulte a documentação do Prisma e do Node.js para resolver quaisquer problemas específicos que você possa encontrar.
 
 ## Modelos
 
